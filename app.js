@@ -37,6 +37,8 @@ app.post("/api/order", async (req, res) => {
   res.status(200).json("success");
 });
 
-app.listen(8080, () => {
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
   console.log("Server started at port 8080");
 });
